@@ -9,7 +9,7 @@
 <body>
     <!--
 
-        +-- CALENDAR'S FUNCTIONAL REQUIREMENTS --+
+        +-- CALENDAR'S FUNCTIONAL REQUIREMENTS --+ ANALYSIS
         - show the days inside a monthly container
         - user can click on a day to select it
         - a selected day should be highlighted somehow
@@ -29,6 +29,37 @@
         - user should be able to move across several months
         - we should display the actual days for the selected month (and the month/year)
         - we should display the day-of-the-week for eacch day
+
+        +-- THINGS THAT WE HAVE TO IMPLEMENT --+ DESIGN
+        
+            -- HTML ELEMENTS --
+        - a container for the month itself
+        - the days themselves (dynamically generated)
+        - a header for the month
+        - a container for the meetings (of the selected day)
+        - the actual meetings
+        - a container for "create a new meeting" section
+        - some inputs to collect new meeting details
+
+            -- CSS CLASSES --
+        - generic day
+        - currently selected day
+        - days that have some meetings assigned
+        - style for: inputs / meetings
+
+            -- FUNCTIONS -- 
+        - get the current month
+        - get the number of days that the current month has
+        - create as many days as we need
+        - select a day (when user clicks on it)
+        - we should structure our day/meeting related data in order to be able to access them inividually
+        - create a new meeting based on the user input
+        - every day should have from 0 to N meetings assigned to
+        - display all meetings for the selected day
+        - delete a meeting
+        - store/ retrieve meeting data from the disk
+        - style each day properly (IE: selected or not/has meetings...)
+        - modify meeting details (also show them into editable field)
 
     -->
     
