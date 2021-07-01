@@ -1,3 +1,37 @@
+/* LETS MODEL OUR DATA
+// WE WANT TO STRUCTURE OUR DATA SO THAT WE CAN HAVE:
+1. collection of DAYS > use an OBJECT as if it were a DICTIONARTY (by using key-value pairs like "day id" - "meetings the day")
+2. collection of MEETINGS for EACH DAY > every day should offer the entire list of meetings that take place on that day > we use an ARRAY for that
+3. each meeting in the collection should provide details like TIME and DESCRIPTION of the meeting itself > we use an object
+
+
+// EXAMPLES OF HOW WE WOULD LIKE TO STRUCTURE OUR DATA
+
+// This is how we would like to store the meeting data for a single day
+let meetingsForADay = [ { time: "09:00", description: "Live lecture"}, { time: "15:00", description: "Recap session"} ]
+
+// How can we track them all?
+
+// >> This alternative uses an array - works, but can have some issues in the long run
+let meetingDataUsingAnArray = [
+    [ { time: "09:00", description: "Live lecture"}, { time: "15:00", description: "Recap session"} ],
+    [ { time: "13:00", description: "Lunch break"} ],
+    [],
+    [],
+    [ { time: "17:00", description: "Dentist"} ]
+]
+
+// >> This alternative uses an object as a "Dictionary" (key-value pair collection): works better
+// - no need to specify "empty" days
+// - better support for multiple months/years
+let meetingData = {
+    "2021-07-01": [ { time: "09:00", description: "Live lecture"}, { time: "15:00", description: "Recap session"} ],
+    "2021-07-02": [ { time: "13:00", description: "Lunch break"} ],
+    "2021-07-05": [ { time: "17:00", description: "Dentist"} ]
+}
+*/
+
+
 window.onload = function(){
     displayEntireMonth()
 }
