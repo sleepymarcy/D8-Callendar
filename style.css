@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    color: white;
+    max-width: 768px;
+    margin: auto;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    color:#00db71;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#month-container {
+    border-style: solid;
+    border-width: 3px;
+    color: #4a4a4a;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.day {
+    background-color: #0f0f0f;
+    display: inline-block;
+    width: 12px;
+    min-height: 64px;
+    text-align: center;
+    padding-top: 32px;
+    font-size: larger;
+    font-weight: bold;
+    border-style: solid;
+    border-radius: 8px;
+    margin: 3px;
+    
+}
