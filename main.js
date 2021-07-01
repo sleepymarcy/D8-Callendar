@@ -86,3 +86,31 @@ const createMeeting = function() {
     const meetingsListNode = document.getElementById("meetings-for-the-day")
     meetingsListNode.appendChild(newMeetingListItemNode)
 }
+const getCurrentlySelectedDay = function(){
+    return document.querySelector(".selected")
+}
+
+const getSelectedDayMeetings = function(){
+
+    // CHECK WHICH ONE IS THE SELECTED DAY
+    let currentlySelectedDayNode = getCurrentlySelectedDay()
+
+    // If no day is currently selected..
+    if (currentlySelectedDayNode === null){
+        return null // ..we simply exit this function
+    }
+
+    // We use the day number as the "ID", the "key" for accessing the dictionary
+    const selectedDayId = currentlySelectedDayNode.innerText
+
+    // We get the array with all the meetings for that specific day
+    let meetingsForTheDayArray = meetingData[selectedDayId]
+
+    // If no data is present for that day yet...
+    if (meetingsForTheDayArray === undefined){
+        meetingsForTheDayArray = []
+        meetingData[selectedDayId] = meetingsForTheDayArray
+    }
+
+    return meetingsForTheDayArray
+}
